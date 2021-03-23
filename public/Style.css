@@ -196,3 +196,46 @@ html, body{
   body{
     overflow:hidden;
   }
+
+  .side-bar {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid;
+    border-radius: 0;
+    border-color: rgba(64, 194, 133, 0.693);
+    background-color: rgb(255, 255, 255);
+    transition: 0.8s ease;
+}
+
+.toggle-menu {
+    height: 50px;
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 9rem;
+    width: 10px;
+    position: absolute;
+    outline: none;
+    z-index: 1;
+    background-color: rgba(64, 194, 133, 0.693);
+    border-color: rgba(64, 194, 133, 0.693);
+    border-left: 0;
+}
+
+.effect-1, 
+.effect-2, 
+.effect-3{border: 0; padding: 7px 0; border-bottom: 1px solid #ccc;}
+
+.effect-1 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #3399FF; transition: 0.4s;}
+.effect-1:focus ~ .focus-border{width: 100%; transition: 0.4s;}
+
+.effect-2 ~ .focus-border{position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background-color: #3399FF; transition: 0.4s;}
+.effect-2:focus ~ .focus-border{width: 100%; transition: 0.4s; left: 0;}
+
+.effect-3 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; z-index: 99;}
+.effect-3 ~ .focus-border:before, 
+.effect-3 ~ .focus-border:after{content: ""; position: absolute; bottom: 0; left: 0; width: 0; height: 100%; background-color: #3399FF; transition: 0.4s;}
+.effect-3 ~ .focus-border:after{left: auto; right: 0;}
+.effect-3:focus ~ .focus-border:before, 
+.effect-3:focus ~ .focus-border:after{width: 50%; transition: 0.4s;}
+
+input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}

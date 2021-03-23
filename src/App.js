@@ -2,17 +2,34 @@ import logo from './logo.svg';
 import './App.css';
 import PieChartDemonstration from './component/PieChartDemonstration';
 import SideNav from "./component/SideNav";
+import Sidebar from "./component/Sidebar";
 function App() {
   return (
-    <div className="App">
+    <div classNameName="App">
      <div style={{backgroundColor:'white', height:'50px'}}>
        <h2 style={{ fontFamily:'URW Chancery L, cursive', marginLeft:"5px", color:'blue', fontWeight:"bold"}}>Pie Chart</h2>        
        </div> 
        <PieChartDemonstration></PieChartDemonstration>
-       <SideNav></SideNav>
+       <Sidebar width={300} height={"100vh"}>
+         <div>
+       <input classNameName="effect-1" type="text" placeholder="Placeholder Text"/>
+            <span classNameName="focus-border"></span>
+            </div>
+            <div>
+            <input className="effect-2" type="text" placeholder="Placeholder Text"/>
+            <span className="focus-border"></span>
+            </div>
+            <div>
+            <input className="effect-3" type="text" placeholder="Placeholder Text"/>
+            <span className="focus-border"></span>
+            </div>
+         
+        </Sidebar>
+       {/* <SideNav></SideNav> */}
+
        {/* <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
+            <ul className="sidebar-nav">
+                <li className="sidebar-brand">
                     <a href="#">
                         SlashTv
                     </a>
